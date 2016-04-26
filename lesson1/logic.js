@@ -34,6 +34,28 @@ function slide (forward) {
     }
 }
 
+/**
+ * Shows slide with given number
+ * @param n
+ */
+function gotoSlide(n) {
+    var slide = document.querySelector('.slide:first-child');
+    var qty = document.querySelector('.slider').childElementCount;
+    n = Math.max(1, Math.min(n, qty));
+    for(var i = 1; i <= qty; i++, slide = slide.nextElementSibling) {
+        if (i < n) {
+            slide.classList.remove('present', 'future');
+            slide.classList.add('past');
+        } else if (i == n) {
+            slide.classList.remove('past', 'future');
+            slide.classList.add('present');
+        } else {
+            slide.classList.remove('past', 'present');
+            slide.classList.add('future');
+        }
+    }
+}
+
 /*
  * @desc: slide generating function.
  *        It creates large html string that describes the structure of the slides.
@@ -53,7 +75,7 @@ function generateSlides () {
         } else {
             time = 'past';
         }
-        html += '<div class="slide '+ time +'">'+ i +'</div>';
+        html += '<div class="slide '+ time +'">'+ (20-i) +'</div>';
     }
 
     slider.innerHTML = '';
@@ -102,6 +124,8 @@ function bindUIActions () {
             slide(true);
         } else if (e.which === 37) { // left arrow key
             slide(false);
+        } else if (e.which === 13) { // enter key
+            gotoSlide(document.getElementById('nr').value);
         }
     });
 }

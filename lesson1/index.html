@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Slide show</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="look.css">
 	<script type="text/javascript" src="logic.js"></script>
 </head>
 <body>
-<div class="btn prev"></div>
-<div class="slider">
-	<div class="slide past">1</div>
-	<div class="slide present">2</div>
-	<div class="slide future">3</div>
-</div>
-<div class="btn next"></div>
+	<div class="main">
+		<div class="btn prev"></div>
+		<div class="slider">
+			<div class="slide past">1</div>
+			<div class="slide present">2</div>
+			<div class="slide future">3</div>
+		</div>
+		<div class="btn next"></div>
+		<div class="go-to-slide">
+			<input type="number" size="3" min="1" max="20" value="10" id="nr">
+			<button onclick="gotoSlide(document.getElementById('nr').value)">Go!</button>
+		</div>
+	</div>
 </body>
 </html>
