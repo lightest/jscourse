@@ -9,14 +9,20 @@
 	<script type="text/javascript" src="presentationsPage/presentationsPage.js"></script>
 	<script type="text/javascript" src="chatPage/chatPage.js"></script>
 
+	<script type="text/javascript" src="router.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 <div class="main">
 	<div class="header">
-		<div class="menu-btn">&#9776;</div>
+		<div class="menu-btn" onclick="this.parentNode.classList.toggle('hidden');">&#9776;</div>
 		<div class="header-caption">pagename</div>
 	</div>
+	<ul>
+		<li><a href="#/events">Events</a></li>
+		<li><a href="#/presentations">Presentations</a></li>
+		<li><a href="#/chat">Chat</a></li>
+	</ul>
 	<div id="events" class="page">page1</div>
 	<div id="presentations" class="page">page2</div>
 	<div id="chat" class="page">page3</div>

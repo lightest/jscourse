@@ -90,7 +90,7 @@ function generateSlides () {
         } else {
             time = 'future';
         }
-        html += '<div class="slide '+ time +'">'+ (20-i) +'</div>';
+        html += '<div class="slide '+ time +'">'+ (1+i) +'</div>';
     }
 
     slider.innerHTML = '';

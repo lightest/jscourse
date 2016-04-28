@@ -13,10 +13,21 @@ body {
 	line-height: 50px;
 	text-align: center;
 	font-size: 24px;
+	position: relative;
+	width: 100%;
+	padding-right: 50px;
+	margin-left: -50px;
+	transition: margin-left 0.5s;
+}
+
+.header.hidden {
+	display: block;
+	margin-left: -100%;
 }
 
 .menu-btn {
 	position: absolute;
 	right: 0;
 	width: 50px;
+	cursor: pointer;
 }
