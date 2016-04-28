@@ -12,24 +12,39 @@
  *        in the function below. There is no description for the .present class
  *        in css file.
  */
-function slide (forward) {
-    var present = document.querySelector('.slide.present');
-    var past = present.previousElementSibling;
-    var future = present.nextElementSibling;
 
-    if(forward) {
-        if(future) {
-            present.classList.remove('present');
-            present.classList.add('past');
-            future.classList.remove('future');
-            future.classList.add('present');
+function slide (forward) {
+     var present = document.querySelector('.slide.present');
+     var past = present.previousElementSibling;
+     var future = present.nextElementSibling;
+ 
+     if(forward) {
+         if(future) {
+             present.classList.remove('present');
+             present.classList.add('past');
+             future.classList.remove('future');
+             future.classList.add('present');
+         }
+     } else {
+         if(past) {
+             present.classList.remove('present');
+             present.classList.add('future');
+             past.classList.remove('past');
+             past.classList.add('present');
         }
-    } else {
-        if(past) {
-            present.classList.remove('present');
-            present.classList.add('future');
-            past.classList.remove('past');
-            past.classList.add('present');
+    }
+}
+
+function slide_homework (n) {
+    var slides = document.querySelectorAll('.slide');
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('past', 'present', 'future');
+        if(i < n) {
+            slides[i].classList.add('past');
+        } else if (i > n) {
+            slides[i].classList.add('future');
+        } else {
+            slides[i].classList.add('present');
         }
     }
 }
@@ -69,11 +84,11 @@ function generateSlides () {
     // check out how for loop is constructed.
     // this is the fastest known to me way to iterate
     // through anything - backwards. Also the form is very short.
-    for(var i = 20; --i >= 0;) {
+    for(var i = 0; i <= 20; i++) {
         if(i === 0) {
             time = 'present';
         } else {
-            time = 'past';
+            time = 'future';
         }
         html += '<div class="slide '+ time +'">'+ (20-i) +'</div>';
     }
