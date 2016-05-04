@@ -1,0 +1,63 @@
+body * {
+	box-sizing: border-box;
+}
+
+div {
+	display: block;
+}
+
+#chat.page .search-wrapper {
+	position: absolute;
+    background: #ddd;
+    padding: 5px;
+    width: 100%;
+    bottom:0;
+
+}
+
+#chat.page input {
+    padding: 10px;
+    width: 80%;
+    position: relative;
+    -webkit-appearance: none;
+    border: 10 px black;
+}
+
+#chat.page .messages {
+	position: absolute;
+	width: 100%;
+	top:0;
+	bottom: 50px;
+	overflow: auto;
+
+}
+
+#chat.page .message-wrapper.me {
+	text-align: right;
+}
+
+#chat.page .message {
+	padding: 10px;
+	margin: 10px 20px 10px 10px;
+	font-size: 14px;
+	background: gainsboro;
+	position: relative;
+	display:inline-block;
+
+}
+
+#chat.page .message .message-from {
+	font-size: 16px;
+	font-weight: bolder;
+
+#chat.page .btn {
+	background-color: #e7e7e7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    position: relative;
+}
