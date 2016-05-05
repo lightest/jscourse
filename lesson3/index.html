@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="look.css">
+    <link rel="stylesheet" href="eventsPage/eventsPage.css">
+
+    <script type="text/javascript" src="lib/path.min.js"></script>
+    <script type="text/javascript" src="lib/handlebars-v4.0.5.js"></script>
+
+    <script type="text/javascript" src="router.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+
+    <script type="text/javascript" src="eventsPage/eventsPage.js"></script>
+    <script type="text/javascript" src="presentationsPage/presentationsPage.js"></script>
+    <script type="text/javascript" src="chatPage/chatPage.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div class="menu">
+    <div class="menu-item">Events</div>
+    <div class="menu-item">Presentations</div>
+    <div class="menu-item">Chat</div>
+</div>
+<div class="main">
+    <div class="header">
+        <div class="menu-btn">&#9776;</div>
+        <div class="header-caption">pagename</div>
+    </div>
+    <div id="events" class="page">
+        <div class="search-wrapper">
+            <input type="search" placeholder="Type to search"></input>
+        </div>
+        <div class="events-list">
+            <div data-name="Tesla model 3 unveil" class="event">
+                <div class="name">Tesla model 3 unveil</div>
+                <div class="room">main hall</div>
+                <div class="time">20:30</div>
+            </div>
+            <div data-name="Tesla model 4 unveil" class="event">
+                <div class="name">Tesla model 4 unveil</div>
+                <div class="room">main hall</div>
+                <div class="time">20:30</div>
+            </div>
+            <div data-name="Tesla model 5 unveil" class="event">
+                <div class="name">Tesla model 5 unveil</div>
+                <div class="room">main hall</div>
+                <div class="time">20:30</div>
+            </div>
+        </div>
+    </div>
+    <div id="presentations" class="page">page2</div>
+    <div id="chat" class="page">page3</div>
+</div>
+</body>
+
+<script id="event-template" type="text/x-handlebars-template">
+    <div data-name="{{name}}" class="event">
+        <div class="name">{{name}}</div>
+        <div class="room">{{room}}</div>
+        <div class="time">{{time}}</div>
+    </div>
+</script>
+
+</html>

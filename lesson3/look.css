@@ -1,0 +1,64 @@
+body {
+	font-family: arial;
+	margin: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.header {
+	background: deepskyblue;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.menu-btn {
+	position: absolute;
+	right: 0;
+	width: 50px;
+}
+
+.main {
+	transition: transform .3s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.main.opened {
+	transform: translate3d(calc(-100% + 50px), 0, 0);
+}
+
+.main .page {
+	background: white;
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: gray;
+	color: white;
+	text-align: right;
+}
+
+.menu-item {
+	border-bottom: 1px solid darkgray;
+	padding: 10px;
+}
+
+.menu-item:active {
+	background: rgba(0,0,0,.3);
+}

@@ -1,0 +1,25 @@
+#events.page input {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    -webkit-appearance: none;
+}
+
+#events.page .search-wrapper {
+    background: #ddd;
+    padding: 5px;
+}
+
+#events.page .event {
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+}
+
+#events.page .event:active {
+    background: rgba(0,0,0, .1);
+}
+
+#events.page .event .name {
+    font-size: 18px;
+}
