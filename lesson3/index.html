@@ -4,6 +4,7 @@
     <title></title>
     <link rel="stylesheet" href="look.css">
     <link rel="stylesheet" href="eventsPage/eventsPage.css">
+    <link rel="stylesheet" href="chatPage/chatPage.css">
 
     <script type="text/javascript" src="lib/path.min.js"></script>
     <script type="text/javascript" src="lib/handlebars-v4.0.5.js"></script>
@@ -51,7 +52,47 @@
         </div>
     </div>
     <div id="presentations" class="page">page2</div>
-    <div id="chat" class="page">page3</div>
+    <div id="chat" class="page">
+        <div class="messages">
+            <div class="message-wrapper">
+                <div class="message">
+                    <div class="message-time">12:00</div>
+                    <div class="message-from">ABC</div>
+                    <div class="message-text">aaaaaaa</div>
+                </div>
+            </div>
+            <div class="message-wrapper me">
+                <div class="message">
+                    <div class="message-time">12:04</div>
+                    <div class="message-text">bbbbb</div>
+                </div>
+            </div>
+            <div class="message-wrapper">
+                <div class="message">
+                    <div class="message-time">12:10</div>
+                    <div class="message-from">A</div>
+                    <div class="message-text">ccccccc</div>
+                </div>
+            </div>
+            <div class="message-wrapper me">
+                <div class="message">
+                    <div class="message-time">12:15</div>
+                    <div class="message-text">ddddddd</div>
+                </div>
+            </div>
+            <div class="message-wrapper">
+                <div class="message">
+                    <div class="message-time">12:20</div>
+                    <div class="message-from">B</div>
+                    <div class="message-text">eeeeee</div>
+                </div>
+            </div>
+        </div>
+        <div class="search-wrapper">
+              <input type="text" placeholder="Type text"></input>
+              <button class="button">Send</button>
+        </div>
+    </div>
 </div>
 </body>
 
